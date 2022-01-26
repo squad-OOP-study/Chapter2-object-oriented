@@ -48,7 +48,43 @@
 
 ---
 
+## 2. 객체(Object)
+- 객체는 클래스의 인스턴스이며, 메모리에 할당되기 전까지 객체는 존재하지 않는다.
+- **객체는 데이터와 그 데이터를 조작하는 프로시저(오퍼레이션, 메서드, 함수)로 구성**된다.
+    - 오퍼레이션(Operation) : 보통 객체가 제공하는 기능을 오퍼레이션(Operation)이라고 부른다.
+- 객체가 어떤 데이터를 내부에 가지고 있고, 어떻게 구현되어있는지에 대한것은 사용하는 입장에서는 알 필요가 없다. 
 
+> (TMI) C언어에도 객체(Object)라는 개념이 있다고 한다. [참고1](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=han95173&logNo=220765393422) [참고2](http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf)<br><br>
+>3.15<br>
+>1 object<br>
+>region of data storage in the execution environment, the contents of which can represent values.
+
+### 인터페이스와 클래스
+- 오퍼레이션의 사용법은 일반적으로 세 개로 구성되며 이를 `시그니처(Signature)`라고 부른다.
+    1. 기능 식별 이름
+    2. 파라미터 및 파라미터 타입
+    3. 기능 실행 결과 값
+- 객체가 제공하는 모든 오퍼레이션 집합을 객체의 `인터페이스(interface)`라고 부른다.
+    - 객체를 사용하기 위한 명세서나 규칙, 프로토타입
+- 오퍼레이션을 구현하는데 필요한 구현이 포함된 것을 `클래스(class)`라고 부른다.
+- 위에서 언급한 `인터페이스`와 `클래스`는 자바에서 사용하는 것을 말한것이 아니라 객체 지향에서 사용하는 개념상의 `인터페이스`와 `클래스`를 말한다.
+
+### 메시지
+- 객체는 메시지를 통해 서로 통신한다. 즉, A객체에서 B객체의 오퍼레이션 실행을 요청하는 것을 `메시지를 보낸다`라고 한다.
+- `메소드를 호출한다`라고 부르기도 한다.
+- 이런 개념을 이용한 `메시징 패턴(Messaging Pattern)`도 존재한다.
+    - 이 메시징 패턴은 다른 디자인 패턴을 구현하는데 사용된다.
+- [잘 정리된 글](https://panonit.com/blog/overview-message-passing-object-oriented-programming)
+
+---
+
+## 3. 객체의 책임과 크기
+- 객체는 자신만의 책임을 가지고 있다. 책임이라는 것은 하나의 객체는 하나의 일만 한다는 것인데, 한 객체에 기능이 많아지게 되면 결국 데이터를 공유해서 사용하게 되고 이는 결국 절차 지향적인 구조를 갖게 된다.
+- 한 객체가 여러가지 일을 하게 되면 기능을 변경하는 것이 어렵게 된다.
+- 이러한 원칙을 `객체 지향 설계 원칙 5가지 (SOLID)`중 하나인 `단일 책임 원칙(SRP)`라고 한다.
+
+
+---
 
 **[출처 및 참고사이트]**
 - 개발자가 반드시 정복해야 할 객체 지향과 디자인 패턴
@@ -56,3 +92,5 @@
 - http://www.incodom.kr/%EC%A0%88%EC%B0%A8_%EC%A7%80%ED%96%A5
 - http://www.incodom.kr/%EA%B0%9D%EC%B2%B4_%EC%A7%80%ED%96%A5
 - https://m.blog.naver.com/atalanta16/220249264429
+- https://ko.wikipedia.org/wiki/%EA%B0%9D%EC%B2%B4_(%EC%BB%B4%ED%93%A8%ED%84%B0_%EA%B3%BC%ED%95%99)
+- https://panonit.com/blog/overview-message-passing-object-oriented-programming
