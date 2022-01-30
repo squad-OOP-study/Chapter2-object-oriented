@@ -36,7 +36,7 @@
 - 객체는 프로시저를 실행하는데 필요한 만큼의 데이터를 가지며, 객체들이 모여 프로그램을 구성한다
 - 작은 문제를 해결하는 객체를 생성해 큰문제를 해결하는 Bottom-Up 방식이다.
 
-<img src="https://user-images.githubusercontent.com/79504043/151650129-1f49019c-8637-42c0-8fa3-c3f342da6333.png" width="60%" height="100%">
+<img src="https://user-images.githubusercontent.com/79504043/151650129-1f49019c-8637-42c0-8fa3-c3f342da6333.png" width="50%" height="100%">
 <figcaption>객체 지향 기법을 적용한 프로그램은 데이터와 프로시저를 함께 갖는 객체들의 네트워크로 구성된다.</figcaption>
 
 ### 객체 지향의 장점
